@@ -8,7 +8,7 @@
   
   <author>Benjamin Pitzer</author>
   <author>Alexis Maldonado</author>
-  <author>Ferenc Balint-Benczedi</author>
+  <author>Ferenc Balint-Benczedi(catkinization)</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
