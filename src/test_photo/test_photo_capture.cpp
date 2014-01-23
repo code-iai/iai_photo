@@ -37,6 +37,7 @@
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
+#include <ctime>
 
 #include <ros/ros.h>
 #include <sensor_msgs/Image.h>
@@ -62,12 +63,15 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::ServiceClient client = n.serviceClient<photo::Capture>("/photo/capture");
   photo::Capture srv;
+  std::stringstream filename;
+  filename<<"image_"<<std::time(NULL)<<".jpg";
   if(client.call(srv))
   {
     printf("Calling photo/capture service was successful\n");
     cv_ptr = cv_bridge::toCvCopy(srv.response.image, enc::BGR8);
     IplImage tmp = cv_ptr->image;
-    cvSaveImage("test.jpg", &tmp);
+    cvSaveImage(filename.str().c_str(), &tmp);
+    printf("Saved photo: %s\n",filename.str().c_str());
   }
   else
   {
