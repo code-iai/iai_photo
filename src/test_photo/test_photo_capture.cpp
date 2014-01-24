@@ -47,10 +47,10 @@
 
 namespace enc = sensor_msgs::image_encodings;
 
-#include <photo/photo.h>
-#include <photo/GetConfig.h>
-#include <photo/SetConfig.h>
-#include <photo/Capture.h>
+#include <iai_photo/photo.h>
+#include <iai_photo/GetConfig.h>
+#include <iai_photo/SetConfig.h>
+#include <iai_photo/Capture.h>
 
 using namespace std;
 
@@ -61,8 +61,8 @@ int main(int argc, char **argv)
   cv_bridge::CvImagePtr cv_ptr;
 
   ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<photo::Capture>("/photo/capture");
-  photo::Capture srv;
+  ros::ServiceClient client = n.serviceClient<iai_photo::Capture>("/photo/capture");
+  iai_photo::Capture srv;
   std::stringstream filename;
   filename<<"image_"<<std::time(NULL)<<".jpg";
   if(client.call(srv))

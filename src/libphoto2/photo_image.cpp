@@ -38,7 +38,7 @@
 
 #include <iostream>
 
-#include <photo/photo_image.hpp>
+#include <iai_photo/photo_image.hpp>
 
 photo_image::photo_image( void ) :
   width_(0),

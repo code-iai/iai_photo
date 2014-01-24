@@ -44,8 +44,8 @@
 #include <gphoto2/gphoto2-filesys.h>
 
 
-#include "photo/photo_camera_list.hpp"
-#include "photo/photo_image.hpp"
+#include "iai_photo/photo_camera_list.hpp"
+#include "iai_photo/photo_image.hpp"
 
 class photo_camera
 {

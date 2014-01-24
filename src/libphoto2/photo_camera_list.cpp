@@ -36,9 +36,9 @@
 
 #include <iostream>
 
-#include "photo/photo_reporter.hpp"
+#include "iai_photo/photo_reporter.hpp"
 
-#include "photo/photo_camera_list.hpp"
+#include "iai_photo/photo_camera_list.hpp"
 
 
 photo_camera_list::photo_camera_list( void ) :

@@ -42,14 +42,14 @@
 #include <sensor_msgs/fill_image.h>
 
 // ROS Services
-#include <photo/GetConfig.h>
-#include <photo/SetConfig.h>
-#include <photo/Capture.h>
+#include <iai_photo/GetConfig.h>
+#include <iai_photo/SetConfig.h>
+#include <iai_photo/Capture.h>
 
 // photo library headers
-#include "photo/photo_camera_list.hpp"
-#include "photo/photo_camera.hpp"
-#include "photo/photo_image.hpp"
+#include "iai_photo/photo_camera_list.hpp"
+#include "iai_photo/photo_camera.hpp"
+#include "iai_photo/photo_image.hpp"
 
 
 class PhotoNode
@@ -109,7 +109,7 @@ public:
     camera_.photo_camera_close();
   }
 
-  bool setConfig( photo::SetConfig::Request& req, photo::SetConfig::Response& resp )
+  bool setConfig( iai_photo::SetConfig::Request& req, iai_photo::SetConfig::Response& resp )
   {
     photo_mutex_.lock();
     bool error_code = camera_.photo_camera_set_config( req.param, req.value );
@@ -117,7 +117,7 @@ public:
     return error_code;
   }
 
-  bool getConfig( photo::GetConfig::Request& req, photo::GetConfig::Response& resp )
+  bool getConfig( iai_photo::GetConfig::Request& req, iai_photo::GetConfig::Response& resp )
   {
     char* value = new char[255];
     photo_mutex_.lock();
@@ -131,7 +131,7 @@ public:
     return error_code;
   }
 
-  bool capture( photo::Capture::Request& req, photo::Capture::Response& resp )
+  bool capture( iai_photo::Capture::Request& req, iai_photo::Capture::Response& resp )
   {
     // capture a camera image
     photo_mutex_.lock();

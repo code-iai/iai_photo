@@ -44,7 +44,7 @@ extern "C" {
 #include <gphoto2/gphoto2-port-log.h>
 #include <gphoto2/gphoto2-setting.h>
 #include <gphoto2/gphoto2-filesys.h>
-#include <photo/photo_image.h>
+#include <iai_photo/photo_image.h>
 
 #define PHOTO_MODE_DIRECT     0
 #define PHOTO_MODE_TO_FILE    1

@@ -39,9 +39,9 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "photo/photo_reporter.hpp"
+#include "iai_photo/photo_reporter.hpp"
 
-#include "photo/photo_camera.hpp"
+#include "iai_photo/photo_camera.hpp"
 
 
 photo_camera::photo_camera( void ) :

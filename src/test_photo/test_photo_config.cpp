@@ -40,10 +40,10 @@
 
 #include <ros/ros.h>
 
-#include <photo/photo.h>
-#include <photo/GetConfig.h>
-#include <photo/SetConfig.h>
-#include <photo/Capture.h>
+#include <iai_photo/photo.h>
+#include <iai_photo/GetConfig.h>
+#include <iai_photo/SetConfig.h>
+#include <iai_photo/Capture.h>
 
 using namespace std;
 
@@ -52,8 +52,8 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "test_photo_config");
 
   ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<photo::SetConfig>("/photo/set_config");
-  photo::SetConfig srv;
+  ros::ServiceClient client = n.serviceClient<iai_photo::SetConfig>("/photo/set_config");
+  iai_photo::SetConfig srv;
   srv.request.param = "exptime";
   srv.request.value = "20";
   if(!client.call(srv))
