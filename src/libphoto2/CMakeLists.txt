@@ -8,4 +8,4 @@ add_library(photo2 photo_reporter.cpp photo_camera_list.cpp photo_camera.cpp pho
 #link_directories(${GPHOTO2_LIBRARY_DIRS})
 
 
-target_link_libraries(photo2 ${GPHOTO2_LIBRARIES} ${OpenCV_LIBRARIES})
+target_link_libraries(photo2 ${LIBGPHOTO2_LIBRARIES} ${OpenCV_LIBRARIES})

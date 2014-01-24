@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(photo)
+project(iai_photo)
 #set(ROS_BUILD_TYPE RelWithDebInfo)
 
 find_package(catkin REQUIRED COMPONENTS 
@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
     message_generation
 )
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/iai_photo/cmake/")
+find_package(GPHOTO2 REQUIRED)
 find_package(OpenCV REQUIRED)
 
 add_service_files(

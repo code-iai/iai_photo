@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>photo</name>
+  <name>iai_photo</name>
   <version>0.0.1</version>
   <description>A generic driver for digital cameras based on gphoto2</description>
   <maintainer email="xxx@xxx.xxx">Ferenc Balint-Benczedi</maintainer>
