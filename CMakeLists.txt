@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
     message_generation
 )
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/iai_robosherlock/iai_photo/cmake/")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/iai_photo/cmake/")
 find_package(GPHOTO2 REQUIRED)
 find_package(OpenCV REQUIRED)
