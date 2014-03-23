@@ -35,6 +35,7 @@
  *********************************************************************/
 
 #include <iostream>
+#include <sys/types.h> // ssize_t
 
 #include "iai_photo/photo_reporter.hpp"
 
