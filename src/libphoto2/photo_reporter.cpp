@@ -51,7 +51,11 @@ void photo_reporter::contextError( GPContext *context, const char *format, va_li
 
   vsnprintf( error_string, 1024, format, args );
   //va_end( args );
-
+  
+  contextError(context, error_string, data);
+}
+void photo_reporter::contextError( GPContext *context, const char *error_string, void *data )
+{
   std::cerr << std::endl << "photo_reporter: Context error " << std::endl
 	    << error_string << std::endl;
 }
@@ -63,6 +67,10 @@ void photo_reporter::contextStatus( GPContext *context, const char *format, va_l
   vsnprintf( status_string, 1024, format, args );
   //va_end( args );
 
+  contextStatus(context, status_string, data);
+}
+void photo_reporter::contextStatus( GPContext *context, const char *status_string, void *data )
+{
   std::cout << "photo_reporter: Status " << status_string << std::endl;
 }
 
