@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<!--xml version="1.0"?-->
 <package>
   <name>iai_photo</name>
   <version>0.0.1</version>
@@ -17,7 +17,10 @@
   <build_depend> sensor_msgs</build_depend>
   <build_depend> opencv2</build_depend>
   <build_depend> cv_bridge</build_depend>
-  
+  <build_depend> message_runtime</build_depend> 
+  <build_depend> message_generation</build_depend>
+
+  <run_depend> message_runtime</run_depend>
   <run_depend> roscpp</run_depend>
   <run_depend> std_msgs</run_depend>
   <run_depend> sensor_msgs</run_depend>

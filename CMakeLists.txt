@@ -30,7 +30,7 @@ generate_messages(
 
 catkin_package(
     INCLUDE_DIRS include
-    CATKIN_DEPENDS roscpp sensor_msgs
+    CATKIN_DEPENDS roscpp sensor_msgs message_runtime
     DEPENDS libgphoto2
     )
 
