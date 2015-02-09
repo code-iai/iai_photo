@@ -34,6 +34,7 @@ catkin_package(
     DEPENDS libgphoto2
     )
 
+include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_subdirectory(src)
 
